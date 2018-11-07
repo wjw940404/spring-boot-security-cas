@@ -1,4 +1,4 @@
-package com.jerry.springboot.custom;
+package com.jerry.springboot.security;
 
 import org.springframework.security.core.GrantedAuthority;
 

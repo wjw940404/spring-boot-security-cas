@@ -1,4 +1,4 @@
-package com.jerry.springboot.custom;
+package com.jerry.springboot.security;
 
 import java.util.Collection;
 import java.util.HashSet;
