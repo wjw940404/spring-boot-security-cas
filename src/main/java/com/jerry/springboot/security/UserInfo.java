@@ -1,11 +1,11 @@
 package com.jerry.springboot.security;
 
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
-
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.userdetails.UserDetails;
 
 /**
  * 用户信息
@@ -13,7 +13,8 @@ import org.springframework.security.core.userdetails.UserDetails;
  *
  */
 public class UserInfo implements UserDetails {
-	private static final long serialVersionUID = -1041327031937199938L;
+
+	private static final long serialVersionUID = 1L;
 
 	/**
 	 * 用户ID
@@ -43,7 +44,7 @@ public class UserInfo implements UserDetails {
 
 	private boolean isEnabled = true;
 
-	private Set<AuthorityInfo> authorities = new HashSet<AuthorityInfo>();
+	private Set<AuthorityInfo> authorities = new HashSet<>();
 
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {

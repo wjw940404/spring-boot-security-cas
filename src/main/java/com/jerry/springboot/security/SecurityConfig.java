@@ -14,14 +14,12 @@ import org.springframework.security.cas.web.CasAuthenticationFilter;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.AuthenticationUserDetailsService;
 import org.springframework.security.web.authentication.logout.LogoutFilter;
 import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
 
 @Configuration
-@EnableWebSecurity //启用web权限
 @EnableGlobalMethodSecurity(prePostEnabled = true) //启用方法验证
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	@Autowired
@@ -52,10 +50,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 			//.antMatchers("/","/hello").permitAll()//定义/请求不需要验证
 			.anyRequest().authenticated()//其余的所有请求都需要验证
 			.and()
-		.logout()
+			.logout()
 			.permitAll()//定义logout不需要验证
 			.and()
-		.formLogin();//使用form表单登录
+			.formLogin();//使用form表单登录
 		
 		http.exceptionHandling().authenticationEntryPoint(casAuthenticationEntryPoint())
 			.and()
