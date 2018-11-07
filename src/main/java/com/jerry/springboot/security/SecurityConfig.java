@@ -1,5 +1,6 @@
-package com.chengli.springboot.security;
+package com.jerry.springboot.security;
 
+import com.jerry.springboot.properties.CasProperties;
 import org.jasig.cas.client.session.SingleSignOutFilter;
 import org.jasig.cas.client.validation.Cas20ServiceTicketValidator;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,8 +20,7 @@ import org.springframework.security.core.userdetails.AuthenticationUserDetailsSe
 import org.springframework.security.web.authentication.logout.LogoutFilter;
 import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
 
-import com.chengli.springboot.custom.CustomUserDetailsService;
-import com.chengli.springboot.properties.CasProperties;
+import com.jerry.springboot.custom.CustomUserDetailsService;
 
 @Configuration
 @EnableWebSecurity //启用web权限

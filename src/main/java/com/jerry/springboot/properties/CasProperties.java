@@ -1,4 +1,4 @@
-package com.chengli.springboot.properties;
+package com.jerry.springboot.properties;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
